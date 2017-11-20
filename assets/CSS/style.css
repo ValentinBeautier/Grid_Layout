@@ -1,0 +1,141 @@
+*{box-sizing: border-box;}
+
+.characters{
+    display: grid;
+    grid-gap: 10px;
+    grid-auto-rows: minmax(120px, auto);
+    grid-template-areas:
+    "beemo"
+    "finn"
+    "jack"
+    "marceline"
+    "rainicorn"
+    "flammes"
+    "lumpy"
+    "roiglaces";    
+    
+    font-family:helvetica;
+    text-transform:uppercase;
+    margin:0 calc(50% - (940px / 3));
+    width: 90%;
+    margin-left: 5%;
+}
+        
+.character{
+    border-radius:10px;
+    font-size:1.2em;
+    color:white;
+    text-shadow:0px 0px  2px black;
+    border: 5px solid black;
+    
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.char-beemo{
+    border-color: #BAE0CD;
+    background-color: #23B1A5;
+    grid-area: beemo;
+}
+
+.char-finn{
+    border-color: #00ADE3;
+    background-color: #FFFFFF;
+    grid-area: finn;
+}
+
+.char-jack{
+    border-color: black;
+    background-color: #FCB823;
+    grid-area: jack;
+}
+
+.char-marceline{
+    border-color: #EEF1F3;
+    background-color: #020306;
+    grid-area: marceline;
+}
+
+.char-miss_rainicorn{
+    border-color: #E0ABCE;
+    background-color: #F8F390;
+    grid-area: rainicorn;
+}
+
+.char-princesse_flammes{
+    border-color: #FFA300;
+    background-color: #FF410B;
+    grid-area: flammes;
+}
+
+.char-princesse_lumpy{
+    border-color: #BB9DC8;
+    background-color: #FFDF74;
+    grid-area: lumpy;
+}
+
+.char-roi_glaces{
+    border-color: #A3D8F5;
+    background-color: #0072BC;
+    grid-area: roiglaces;
+}
+
+/*  >640px  */ 
+@media screen and (min-width: 640px) {
+    .characters{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+        "beemo finn finn"
+        "jack jack marceline"
+        "rainicorn rainicorn  flammes"
+        "lumpy lumpy roiglaces";
+    }
+}
+
+/* >768px */ 
+@media screen and (min-width: 768px){
+    .characters{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+        "finn finn finn"
+        "finn finn finn"
+        "beemo beemo beemo"
+        "jack jack flammes"
+        "lumpy lumpy roiglaces"
+        "rainicorn marceline marceline"
+        "rainicorn marceline marceline";
+    }
+}
+
+/* >1024px */
+@media screen and (min-width: 1024px){
+    .characters{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+        "beemo beemo beemo"
+        "beemo beemo beemo"
+        "finn finn finn"
+        "rainicorn marceline marceline"
+        "rainicorn marceline marceline"
+        "jack jack flammes"
+        "lumpy roiglaces roiglaces"
+        ;
+    }
+}
+        
+/* >1280px */ 
+@media screen and (min-width: 1280px) {
+    .characters{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+        "beemo beemo beemo"
+        "beemo beemo beemo"
+        "jack jack flammes"
+        "lumpy lumpy roiglaces"
+        "rainicorn marceline roiglaces"
+        "rainicorn marceline roiglaces"
+        "finn finn finn"
+        ;
+    }
+}
